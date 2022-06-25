@@ -1,0 +1,15 @@
+vars(obj) - dicionario com os atributos do objeto
+from typing import Union - deixa o campo opcional
+https://docs.python.org/3/library/configparser.html - permite ler aruivos de configuracao
+
+
+
+TODO:
+
+    - Tratamento de excecoes
+    - logs
+    - ler arquivo de propriedades
+    - criar makefile
+    - configurar arquivos de requirements
+    - Testes (capitulo inteiro)
+    - add validadres de campos (pydantic)

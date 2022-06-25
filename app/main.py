@@ -6,7 +6,6 @@ from sqlmodel import Session, SQLModel
 from . import crud, schemas
 from .database import get_session, engine
 
-SQLModel.metadata.create_all(bind=engine)
 
 app = FastAPI()
 

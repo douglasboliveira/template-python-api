@@ -1,10 +1,13 @@
-from sqlmodel import Session
+from sqlmodel import Session, except_all
 
 from . import models, schemas
 
 
 def get_user(session: Session, user_id: int):
-    return session.query(models.User).filter(models.User.id == user_id).first()
+    try:
+        return session.query(models.User).filter(models.User.id == user_id).first()
+    except except_all as e:
+        print("[error]") # substituir por log e subir um raise
 
 
 def get_user_by_email(session: Session, email: str):
